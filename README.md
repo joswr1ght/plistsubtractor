@@ -35,15 +35,16 @@ Combined with find, whee!
 
 ```
 $ find ~/Library/ -type f -name \*.plist -print0 | xargs -0 plistsubtractor.py
+$ find ~/Library/ -type f -name \*.plist -print0 | xargs -0 plistsubtractor.py
 Writing Saved Status-Saved Status Array.plist
 Writing Info-iBooks Data 2.plist
 Writing Info-iBooks Data 2-1.plist
-Writing Info-iBooks Data 2-1-2.plist
-Writing Info-iBooks Data 2-1-2-3.plist
-Writing Info-iBooks Data 2-1-2-3-4.plist
-Writing Info-iBooks Data 2-1-2-3-4-5.plist
-Writing Info-iBooks Data 2-1-2-3-4-5-6.plist
-Writing Info-iBooks Data 2-1-2-3-4-5-6-7.plist
+Writing Info-iBooks Data 2-2.plist
+Writing Info-iBooks Data 2-3.plist
+Writing Info-iBooks Data 2-4.plist
+Writing Info-iBooks Data 2-5.plist
+Writing Info-iBooks Data 2-6.plist
+Writing Info-iBooks Data 2-7.plist
 Writing Saved Status-Saved Status Array-1.plist
 Writing com.apple.commerce.knownclients-com.apple.appstore:453.plist
 Writing com.apple.commerce.knownclients-com.apple.appstore:376.plist
@@ -51,6 +52,8 @@ Writing com.apple.commerce.knownclients-com.apple.appstore:459.plist
 Writing com.apple.commerce.knownclients-com.apple.ibooks:453.plist
 Writing com.apple.commerce.knownclients-com.apple.ibooks:376.plist
 Writing Info-FFSegmentStoreStoredFrameIndexes.plist
+Writing Info-FFSegmentStoreStoredFrameIndexes-1.plist
+Writing Info-FFSegmentStoreStoredFrameIndexes-2.plist
 ```
 
 ## Questions?

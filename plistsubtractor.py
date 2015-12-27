@@ -42,7 +42,7 @@ def extplist(plistfile):
                 if not os.path.exists(newfilename):
                     break
                 else:
-                    newfilename=newfilename[:-6] + "-" + str(i) + ".plist"
+                    newfilename=os.path.basename(plistfile[:-6]) + "-" + key + "-" + str(i) + ".plist"
                     i+=1
             print "Writing " + newfilename
             try:
