@@ -11,15 +11,22 @@ except ImportError:
 
 def extplist(plistfile):
     #print "Processing " + plistfile
-    sys.stdout.flush()
     try:
         plistelements=biplist.readPlist(plistfile)
     except biplist.InvalidPlistException:
         print "Invalid plist file: " + plistfile
         return
+    except OverflowError:
+        print "Invalid plist data: " + plistfile
+        return
     except IOError:
         print "Bad file name: " + plistfile
         return
+
+    # Sometimes we get a list or string, not a dictionary
+    if not isinstance(plistelements, dict):
+        return
+
     for key in plistelements:
         if isinstance(plistelements[key], biplist.Data):
             # Try to extract plist
@@ -50,4 +57,7 @@ if __name__ == "__main__":
         print "Usage: %s [plist files]"%sys.argv[0]
         sys.exit(0)
     for pfile in sys.argv[1:]:
+        if pfile[-6:] != ".plist":
+            print "Skipping file '%s'. File names must end in '.plist'"%pfile
+            continue
         extplist(pfile)
