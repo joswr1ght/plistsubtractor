@@ -35,7 +35,6 @@ Combined with find, whee!
 
 ```
 $ find ~/Library/ -type f -name \*.plist -print0 | xargs -0 plistsubtractor.py
-$ find ~/Library/ -type f -name \*.plist -print0 | xargs -0 plistsubtractor.py
 Writing Saved Status-Saved Status Array.plist
 Writing Info-iBooks Data 2.plist
 Writing Info-iBooks Data 2-1.plist
@@ -58,8 +57,4 @@ Writing Info-FFSegmentStoreStoredFrameIndexes-2.plist
 
 ## Questions?
 
-Joshua Wright
-
-@joswr1ght
-
-jwright@hasborg.com
+Joshua Wright, @joswr1ght, jwright@hasborg.com
